@@ -1,0 +1,110 @@
+
+/* =================================
+  Header Styles
+==================================== */
+
+header,
+footer,
+.contact {
+    padding-bottom: 3em;
+    padding-top: 1em;
+}
+
+
+
+
+
+header a {
+    font-weight: bold;
+}
+
+h2 {
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.intro {
+    margin-top: 4em;
+    padding: 20px;
+
+}
+
+/* =================================
+  Content Styles
+==================================== */
+
+.main-content,
+.contact {
+    margin: 0 15;
+
+}
+
+
+
+.contact {
+    margin: 2em;
+    border-bottom: 1px solid lightgrey;
+}
+
+.contact p, a{
+    color: grey;
+    border-bottom: 
+}
+
+/* =================================
+  Footer Styles
+==================================== */
+
+.footer-name {
+    float: left;
+}
+
+.totop {
+    float: right;
+}
+
+.phone p,
+.email p {
+    display: inline-block;
+}
+
+.phone a,
+.email a {
+    padding: 15px;
+}
+
+/* =================================
+  Media Queries
+==================================== */
+
+
+@media screen and (min-width: 768px){
+
+    .nav {
+        display: inline-block;
+    }
+
+    .intro p {
+        float: left;
+        width: 55%;
+        text-align: left;
+    }
+
+    .intro img {
+        float: right;
+        width: 45%;
+    }
+
+    .col {
+        width: 45%;
+        float: left;
+    }
+
+
+    .totop {
+        display: none;
+    }
+}
+
+
+

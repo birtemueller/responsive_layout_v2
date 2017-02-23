@@ -1,0 +1,157 @@
+/* =================================
+  Base Element Styles
+==================================== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    color: #293133;
+    text-align: center;
+    background-color: pink;         /*später wieder auf #f7f7f7 umstellen!*/
+}
+
+
+h2,
+nav li {
+    text-transform: uppercase;
+}
+
+p {
+    line-height: 1.5;
+}
+
+a,
+a:visited {
+    text-decoration: none;          /*macht die Linie unter den Links weg*/
+    color: inherit;
+}
+
+.container {
+    padding: 1em;                   /*so kriegen alle Container-Elemente den gleichen Abstand zum Rand*/
+}
+
+/* =================================
+  Header Styles
+==================================== */
+
+nav li{
+    list-style: none;
+    background-color: white;
+    margin: 5px;                    /*sorgt für Abstände zwischen den Navipunkten*/
+}
+
+nav a {
+    display: block;
+    padding: 10px;                  /*um die Linkfläche der Navi größer zu machen*/
+}
+
+
+
+.profile-picture {
+    width: 60%;                     /*macht das Profilbild kleiner*/
+}
+
+.intro {
+    clear: both;                    /*damit Navi und Introbild nicht ineinander laufen*/
+}
+
+
+/* =================================
+  Content Styles
+==================================== */
+
+.main-content{
+    background-color: #fff;         /*macht den Contentbereich weiß*/
+
+}
+
+.col {
+    margin: 1em;
+}
+
+.col img {
+    width: 100%;                    /*setzt das Bild volle Breite*/
+}
+
+
+/* =================================
+  Footer Styles
+==================================== */
+
+
+
+/* =================================
+  Media Queries
+==================================== */
+
+@media screen and (min-width: 768px){
+
+ 
+    nav li{
+        display: inline-block;
+        background-color: inherit;
+    }
+
+
+
+    .intro p {
+        float: left;
+        width: 55%;
+        text-align: left;
+    }
+
+    .profile-picture {
+        float: right;
+        width: 40%;
+    }
+
+    .col {
+        width: 45%;
+        float: left;
+    }
+
+}
+
+@media screen and (max-width: 1023px){
+
+    .col:nth-child(even) {      
+        clear: left;            /*damit die Elemente noch in Zweierreihen bleiben, auch wenn eins mehr Text hat*/
+        margin-right: 0px;
+        }
+}
+
+
+@media screen and (min-width: 1024px){
+
+
+    h1 {
+        float: left;
+    }
+
+    nav{
+        float: right;
+    }
+
+
+    .col {
+        width: 30%;
+        float: left;
+    }
+
+    .col:nth-child(4n+1) {      
+    clear: left;            /*damit die Elemente noch in Dreierreihen bleiben, auch wenn eins mehr Text hat*/
+    margin-right: 0px;
+    }
+
+}
+
+
+/* ---- Float clearfix ---- */
+
+.clearfix::after {
+        content: " ";
+        display: table;
+        clear: both;
+    }
