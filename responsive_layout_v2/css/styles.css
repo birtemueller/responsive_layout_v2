@@ -77,10 +77,34 @@ nav a {
 
 
 /* =================================
-  Footer Styles
+  Footer and Contact Styles
 ==================================== */
 
+.phone p,
+.email p{
+    display: inline-block;
+    padding-right: 15px;            /*damit Überschrift und Link getrennter sind*/
+}
 
+.contact-data {
+    border-bottom: 1px solid white;
+}
+
+footer p,
+footer a {
+    display: inline;
+    padding: 15px;
+}
+
+.footer-name {
+    float: left;
+    margin: 0;
+}
+
+.totop{
+    float: right;
+    text-transform: uppercase;
+}
 
 /* =================================
   Media Queries
@@ -88,7 +112,7 @@ nav a {
 
 @media screen and (min-width: 768px){
 
- 
+
     nav li{
         display: inline-block;
         background-color: inherit;
@@ -116,7 +140,7 @@ nav a {
 
 @media screen and (max-width: 1023px){
 
-    .col:nth-child(even) {      
+    .col:nth-child(even) {
         clear: left;            /*damit die Elemente noch in Zweierreihen bleiben, auch wenn eins mehr Text hat*/
         margin-right: 0px;
         }
@@ -140,7 +164,7 @@ nav a {
         float: left;
     }
 
-    .col:nth-child(4n+1) {      
+    .col:nth-child(4n+1) {
     clear: left;            /*damit die Elemente noch in Dreierreihen bleiben, auch wenn eins mehr Text hat*/
     margin-right: 0px;
     }
