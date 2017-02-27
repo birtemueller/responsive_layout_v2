@@ -9,7 +9,7 @@ body {
     font-family: 'Raleway', sans-serif;
     color: #293133;
     text-align: center;
-    background-color: pink;         /*später wieder auf #f7f7f7 umstellen!*/
+    background-color: #f7f7f7;
 }
 
 
@@ -28,8 +28,13 @@ a:visited {
     color: inherit;
 }
 
+a:hover {
+    background-color: pink;
+}
+
 .container {
     padding: 1em;                   /*so kriegen alle Container-Elemente den gleichen Abstand zum Rand*/
+    margin-bottom: 1em;
 }
 
 /* =================================
@@ -75,15 +80,34 @@ nav a {
     width: 100%;                    /*setzt das Bild volle Breite*/
 }
 
+.skills ul {
+    margin-bottom: 2em;
+}
+
+.skills li {
+    display: inline-block;
+    padding: 15px;
+    background-color: powderblue;
+    border-radius: 40%;
+}
+
 
 /* =================================
   Footer and Contact Styles
 ==================================== */
 
+.contact {
+    font-family: 'Special Elite';
+}
+
 .phone p,
 .email p{
     display: inline-block;
     padding-right: 15px;            /*damit Überschrift und Link getrennter sind*/
+}
+
+.contact a {
+    padding: 15px;
 }
 
 .contact-data {
@@ -94,14 +118,17 @@ footer p,
 footer a,
 footer ul {
     display: inline;
-    margin: 15px;
+    margin: 0;
+    padding: 15px;
+    margin-bottom: 3em;
 }
 
 .footer-name {
     float: left;
 }
 
-.totop{
+.totop,
+.nav-bottom {
     float: right;
     text-transform: uppercase;
 }
@@ -144,17 +171,12 @@ footer ul {
 
     .contact-text {
         margin: auto;
-        width: 50%; /*um den Text wie in der Vorlage nur über die halbe Breite zu setzen*/
+        width: 60%; /*um den Text wie in der Vorlage nur über die halbe Breite zu setzen*/
     }
 
     .totop {
         display: none; /*um einen device-spezifischen Footer auszuspielen*/
     }
-
-    .nav-bottom {
-        float: right;
-    }
-
 
 
     .nav-bottom li{
