@@ -91,14 +91,14 @@ nav a {
 }
 
 footer p,
-footer a {
+footer a,
+footer ul {
     display: inline;
-    padding: 15px;
+    margin: 15px;
 }
 
 .footer-name {
     float: left;
-    margin: 0;
 }
 
 .totop{
@@ -110,6 +110,14 @@ footer a {
   Media Queries
 ==================================== */
 
+@media screen and (max-width: 767px) {
+
+    .nav-bottom {
+        display: none;
+    }
+
+}
+
 @media screen and (min-width: 768px){
 
 
@@ -117,8 +125,6 @@ footer a {
         display: inline-block;
         background-color: inherit;
     }
-
-
 
     .intro p {
         float: left;
@@ -136,7 +142,29 @@ footer a {
         float: left;
     }
 
+    .contact-text {
+        margin: auto;
+        width: 50%; /*um den Text wie in der Vorlage nur über die halbe Breite zu setzen*/
+    }
+
+    .totop {
+        display: none; /*um einen device-spezifischen Footer auszuspielen*/
+    }
+
+    .nav-bottom {
+        float: right;
+    }
+
+
+
+    .nav-bottom li{
+        float: left;
+        margin: 10px;
+    }
+
+
 }
+
 
 @media screen and (max-width: 1023px){
 
@@ -149,6 +177,10 @@ footer a {
 
 @media screen and (min-width: 1024px){
 
+    h1,
+    nav {
+        margin-top: 22px; /*um die Navigation auf einer Höhe mit der H1 zu haben*/
+    }
 
     h1 {
         float: left;
@@ -158,7 +190,6 @@ footer a {
         float: right;
     }
 
-
     .col {
         width: 30%;
         float: left;
@@ -166,7 +197,6 @@ footer a {
 
     .col:nth-child(4n+1) {
     clear: left;            /*damit die Elemente noch in Dreierreihen bleiben, auch wenn eins mehr Text hat*/
-    margin-right: 0px;
     }
 
 }
