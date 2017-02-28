@@ -133,17 +133,16 @@ footer ul {
     text-transform: uppercase;
 }
 
+.nav-bottom {
+        display: none;
+}
+
+
+
 /* =================================
   Media Queries
 ==================================== */
 
-@media screen and (max-width: 767px) {
-
-    .nav-bottom {
-        display: none;
-    }
-
-}
 
 @media screen and (min-width: 768px){
 
@@ -169,6 +168,11 @@ footer ul {
         float: left;
     }
 
+    .col:nth-child(even) {
+        clear: left;
+        margin-right: 0px;
+        }
+
     .contact-text {
         margin: auto;
         width: 60%; /*um den Text wie in der Vorlage nur über die halbe Breite zu setzen*/
@@ -178,6 +182,9 @@ footer ul {
         display: none; /*um einen device-spezifischen Footer auszuspielen*/
     }
 
+    .nav-bottom {
+            display: block;
+    }
 
     .nav-bottom li{
         float: left;
@@ -186,16 +193,6 @@ footer ul {
 
 
 }
-
-
-@media screen and (max-width: 1023px){
-
-    .col:nth-child(even) {
-        clear: left;            /*damit die Elemente noch in Zweierreihen bleiben, auch wenn eins mehr Text hat*/
-        margin-right: 0px;
-        }
-}
-
 
 @media screen and (min-width: 1024px){
 
@@ -215,11 +212,17 @@ footer ul {
     .col {
         width: 30%;
         float: left;
+        margin-right: 0px;
+    }
+
+    .col:nth-child(even) {
+        clear: none;
     }
 
     .col:nth-child(4n+1) {
-    clear: left;            /*damit die Elemente noch in Dreierreihen bleiben, auch wenn eins mehr Text hat*/
+        clear: left;            /*damit die Elemente noch in Dreierreihen bleiben, auch wenn eins mehr Text hat*/
     }
+
 
 }
 
